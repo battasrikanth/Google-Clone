@@ -17,20 +17,25 @@
       <div id="d2">
         <a href="https://mail.google.com/mail/u/0/?ogbl#inbox">Gmail</a>
         <a href="https://www.google.co.in/imghp?hl=en&authuser=0&ogbl">Images</a>
-        <img
+        <a href="https://labs.google.com/search?source=hp&authuser=0"><img
           src="assets/Labs.png"
           alt=""
           width="25"
           title="Search Labs"
           class="effect"
         />
-        <img
-          src="assets/OIP.jpeg"
-          alt=""
-          width="26px"
-          title="Google apps"
-          class="effect"
-        />
+      </a>
+    <div>
+      <img
+      src="assets/OIP.jpeg"
+      alt=""
+      width="26px"
+      title="Google apps"
+      class="effect"
+      id="apps"
+    />
+    
+    </div>
         <img src="assets/profile.png" alt="" width="27px" title="Google Account" />
       </div>
     </header>
@@ -47,9 +52,9 @@
     <div class="search">
       <div class="searchBox">
         <img src="assets/search.png" alt="" width="20px" />
-        <input type="text" />
-        <img src="assets/microphone.png" alt="" width="25px" />
-        <img src="assets/google.png" alt="" width="30px" />
+        <input type="text"  id="userInput"/ > 
+        <img src="assets/microphone.png" alt="" width="25px" title="Search by voice"/>
+        <img src="assets/google.png" alt="" width="30px" title="Search by image"/>
       </div>
     </div>
 
@@ -89,5 +94,18 @@
         </div>
       </div>
     </footer>
+    <script>
+    document.getElementById("userInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        var inputText = this.value;
+        var baseUrl = "https://www.Google.co.in/search?q="; // Your base URL with pre-existing text
+        var fullUrl = baseUrl + encodeURIComponent(inputText); // Combine and encode the text
+        window.location.href = fullUrl; // Navigate to the new URL
+    }
+    });
+
+
+
+    </script>
   </body>
 </html>
