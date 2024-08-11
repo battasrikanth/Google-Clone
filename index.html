@@ -6,6 +6,10 @@
     <title>Google</title>
     <link rel="stylesheet" href="google.css">
     <link rel="icon" href="assets/G.png" type="image/x-icon">
+    <style>
+     
+
+    </style>
   
   </head>
   <body>
@@ -39,6 +43,21 @@
         <img src="assets/profile.png" alt="" width="27px" title="Google Account" />
       </div>
     </header>
+
+    <nav id="mobileNav" class="d-f">
+        <div class="d-f">
+              <img src="assets/menu.png" alt="">
+            <a href="https://labs.google.com/search?source=hp&authuser=0https://labs.google.com/search?source=hp&authuser=0"> <img src="assets/Labs.png" alt=""></a>
+            <a href="#">All</a>
+            <a href="https://www.google.co.in/imghp?hl=en&authuser=0&ogbl">Images</a>
+        </div>
+        <div class="d-f">
+          <img src="assets/OIP.jpeg" alt="">
+          <img src="assets/profile.png" alt="">
+        </div>
+
+
+    </nav>
     <div>
       <center>
         <img
@@ -62,11 +81,9 @@
       <button><a href="">Google Search</a></button>
       <button><a href="https://doodles.google/">I'm feeling Lucky</a></button>
     </div>
-    <div class="langg" style="margin: 50px 0">
-      <center>
-        <p>
-          Google offered in:
-
+    <div class="langg" >
+    
+        <p>Google offered in:</p>
           <a href=""> हिंदी</a>
           <a href=""> తెలుగు</a>
           <a href=""> मराठी</a>
@@ -74,8 +91,8 @@
           <a href=""> ಕನ್ನಡ</a>
           <a href=""> বাংলা</a>
           <a href="">മലയാളം</a>
-        </p>
-      </center>
+        
+  
     </div>
     <footer >
       <p>India</p>
@@ -98,13 +115,11 @@
     document.getElementById("userInput").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         var inputText = this.value;
-        var baseUrl = "https://www.Google.co.in/search?q="; // Your base URL with pre-existing text
-        var fullUrl = baseUrl + encodeURIComponent(inputText); // Combine and encode the text
-        window.location.href = fullUrl; // Navigate to the new URL
+        var baseUrl = "https://www.Google.co.in/search?q=";
+        var fullUrl = baseUrl + encodeURIComponent(inputText); 
+        window.location.href = fullUrl;
     }
     });
-
-
 
     </script>
   </body>

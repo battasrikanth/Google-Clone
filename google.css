@@ -1,5 +1,6 @@
 body{
     height: 100vh;
+    position: relative;
   }
   *{
     font-size: large;
@@ -22,8 +23,12 @@ body{
   a:hover {
     text-decoration: underline;
   }
-  img {
+  img{
     margin: 6px;
+  }
+  nav img {
+    margin: 3px;
+    width: 25px;
   }
   .effect {
     margin: 2px;
@@ -45,6 +50,7 @@ body{
     flex: 1 0 95%;
     max-width: 570px;
     margin: 0 5px;
+    min-width: 0;
   }
   .searchBox:hover,
   .searchBox:hover input,
@@ -56,6 +62,7 @@ body{
     outline: none;
     font-size: large;
     flex: 90%;
+    min-width: 0px;
   }
   .btns {
     display: flex;
@@ -79,7 +86,7 @@ bottom: 0;
     background-color: #f9f6f6; padding: 5px;
     width: 98%;
   }
-  @media screen and (max-width: 700px) {
+  @media only screen and (max-width: 700px)  {
     #neew {
       flex-basis: 90%;
     }
@@ -89,5 +96,77 @@ bottom: 0;
     #foot > div{
       justify-content: center;
 
+    }
+
+  }
+  .d-f{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+ #mobileNav{
+  display: none;
+ }
+ .langg{
+  margin: 50px 0;
+  text-align: center;
+ }
+ .langg p{
+  display: inline;
+ }
+ nav a:hover, nav a:focus{
+  text-decoration: none;
+  border-bottom: 2px solid rgb(5, 189, 251);
+ }
+ 
+  @media only screen and (max-width: 370px){
+    header{
+      display: none;
+    }
+    #mobileNav{
+      display: flex;
+    }
+    *{
+    font-size: small;
+     }
+     @media only screen and (max-width: 370px){
+      header{
+        display: none;
+      }
+
+      #mobileNav{
+        display: flex;
+      }
+      img {
+        margin: 3px;
+      }
+      .search img{
+         width: 20px;
+      }
+      img {
+        width: 160px;
+      }
+
+      *{
+      font-size: small;
+      }
+
+    .btns{
+      display: none;
+    }
+
+    .langg p{
+    display: block;
+    }
+  
+  .langg p{
+     display: block;
+     }
+     footer{
+      padding: 2px;
+     }
+     #foot div{
+      margin: 3px;
+     }
     }
   }
